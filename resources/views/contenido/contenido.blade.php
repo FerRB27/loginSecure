@@ -7,6 +7,11 @@
         <h1 class="text-center text-3xl textt-orange-600 mb-3">Contenido Principal</h1>
         <hr class="border-4 border-solid border-orange-700 mb-5">
 
+        @auth
+            <span class="text-blue-500 text-lg">Bienvenido </span>{{Auth::user()->name}}
+        @endauth
+            
+        @endauth
         <a href="{{route('logout.destroy')}}" class="float-right hover:underline">Cerrar Sesion</a>
 
         <p class="bd-white px-5 p-6 mt-5 mb-7 leading-7">
